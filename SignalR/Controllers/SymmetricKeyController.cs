@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using BSEP.Common;
 using Security.SecureKeys;
+using BSEP.Business;
 
 namespace SignalR
 {

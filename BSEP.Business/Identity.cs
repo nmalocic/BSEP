@@ -1,4 +1,4 @@
-﻿namespace SignalR
+﻿namespace BSEP.Business
 {
 	public static class Identity
 	{

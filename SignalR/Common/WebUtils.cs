@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
 using BSEP.Common;
+using BSEP.Business;
 
 namespace SignalR.Common
 {
-	public static class WebUtils
+    public static class WebUtils
 	{
 		public static string ReadHeaderValue(this HttpRequestMessage source, string headerName)
 		{
@@ -25,10 +25,10 @@ namespace SignalR.Common
 			return request;
 		}
 
-		public static WebRequest PrepareWebRequestWithCertificate(Uri uri, X509Certificate2 certificate, string myName)
+		public static WebRequest PrepareWebRequestWithCertificate(Uri uri, byte[] certificate, string myName)
 		{
 			WebRequest request = PrepareWebRequest(uri);
-			request.Headers.Add(Constants.HeaderKeys.Certificate, Convert.ToBase64String(certificate.RawData));
+			request.Headers.Add(Constants.HeaderKeys.Certificate, Convert.ToBase64String(certificate));
 			request.Headers.Add(Constants.HeaderKeys.SenderIdenttiy, Identity.UserName);
 			return request;
 		}

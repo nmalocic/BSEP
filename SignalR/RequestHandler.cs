@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Web;
 using BSEP.Business;
 using BSEP.Common;
-using Security;
 using Security.SecureKeys;
 using SignalR.Common;
 
 namespace SignalR
 {
-	public class RequestHandler
+    public class RequestHandler
 	{
 		public void ProcessSendMessageRequest(string sender, string message)
 		{
@@ -28,12 +23,12 @@ namespace SignalR
 		public void ExchangeCertificates()
 		{
 			var url = BuildUrl(Constants.Endpoints.ExchangeCertificate);
-			var request = WebUtils.PrepareWebRequestWithCertificate(url, KeysManager.GetMyCertificate(), Identity.UserName);
+			var request = WebUtils.PrepareWebRequestWithCertificate(url, KeysManager.GetMyCertificateByteArray(), Identity.UserName);
 			using (var response = request.GetResponse())
 			{
-				var certificate = Convert.FromBase64String(response.ReadHeaderValue(Constants.HeaderKeys.Certificate));
+				var certificateBytes = Convert.FromBase64String(response.ReadHeaderValue(Constants.HeaderKeys.Certificate));
 				Identity.ChatClientName = response.ReadHeaderValue(Constants.HeaderKeys.SenderIdenttiy);
-				KeysManager.AddPublicKeyToList(Identity.ChatClientName, new X509Certificate2(certificate));
+				KeysManager.AddPublicKeyToList(Identity.ChatClientName, certificateBytes);
 			}
 		}
 

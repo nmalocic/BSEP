@@ -177,8 +177,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Identity.cs" />
-    <Compile Include="Common\StringBuilderUtility.cs" />
     <Compile Include="Common\WebUtils.cs" />
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\PublicKeyController.cs" />

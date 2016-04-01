@@ -31,11 +31,9 @@ namespace Security.SecureKeys
 		/// returns public key to the user who requested it
 		/// </summary>
 		/// <returns>public key</returns>
-		public static X509Certificate2 GetMyCertificate() => _key;
+		public static byte[] GetMyCertificateByteArray() => _key.RawData;
 
-		public static X509Certificate2 GetMyKey() => _key;
-
-		public static RSACryptoServiceProvider GetMyPrivteKey() => (RSACryptoServiceProvider) _key.PrivateKey;
+		public static RSACryptoServiceProvider GetMyPrivateKey() => (RSACryptoServiceProvider) _key.PrivateKey;
 
 		public static RijndaelManaged GetCurrentSymetricKeyForClient(string client)
 		{
@@ -50,9 +48,9 @@ namespace Security.SecureKeys
 			return _publicKeys[client];
 		}
 
-		public static void AddPublicKeyToList(string client, X509Certificate2 key)
+		public static void AddPublicKeyToList(string client, byte[] key)
 		{
-			_publicKeys[client] = key;
+			_publicKeys[client] = new X509Certificate2(key);
 		}
 
 		public static Tuple<string, string> GenerateSymetricKey(string client)
