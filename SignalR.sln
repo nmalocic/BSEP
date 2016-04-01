@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSEP.Security", "Security\B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSEP.Common", "BSEP.Common\BSEP.Common.csproj", "{D0F548F7-7E99-452D-8583-19FE04470F06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSEP.Business", "BSEP.Business\BSEP.Business.csproj", "{94C3B2A9-3A51-4515-BCBD-313E29417AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D0F548F7-7E99-452D-8583-19FE04470F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0F548F7-7E99-452D-8583-19FE04470F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0F548F7-7E99-452D-8583-19FE04470F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94C3B2A9-3A51-4515-BCBD-313E29417AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C3B2A9-3A51-4515-BCBD-313E29417AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C3B2A9-3A51-4515-BCBD-313E29417AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C3B2A9-3A51-4515-BCBD-313E29417AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

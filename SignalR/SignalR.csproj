@@ -174,22 +174,25 @@
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery.signalR-2.1.2.js" />
     <Content Include="scripts\jquery.signalR-2.1.2.min.js" />
-    <Content Include="TimePage.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChatController.cs" />
+    <Compile Include="Common\Identity.cs" />
     <Compile Include="Common\StringBuilderUtility.cs" />
     <Compile Include="Common\WebUtils.cs" />
-    <Compile Include="Identity.cs" />
-    <Compile Include="PublicKeyController.cs" />
+    <Compile Include="Controllers\ChatController.cs" />
+    <Compile Include="Controllers\PublicKeyController.cs" />
+    <Compile Include="Controllers\SymmetricKeyController.cs" />
     <Compile Include="ChatHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestHandler.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="SymmetricKeyController.cs" />
-    <Compile Include="Util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BSEP.Business\BSEP.Business.csproj">
+      <Project>{94c3b2a9-3a51-4515-bcbd-313e29417ad1}</Project>
+      <Name>BSEP.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BSEP.Common\BSEP.Common.csproj">
       <Project>{d0f548f7-7e99-452d-8583-19fe04470f06}</Project>
       <Name>BSEP.Common</Name>

@@ -33,9 +33,8 @@ namespace SignalR
 
 			XmlDocument document = new XmlDocument();
 			document.LoadXml(xml);
-
-			SignatureProvider provider = new SignatureProvider(Identity.ChatClientName);
-			if (!provider.VerifyXml(document, keyToDecrypt))
+			
+			if (!SignatureProvider.VerifyXml(document, keyToDecrypt))
 				return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
 
 			var symmetricKey = KeysManager.GetCurrentSymetricKeyForClient(Identity.ChatClientName);
