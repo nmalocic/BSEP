@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR", "SignalR\SignalR.csproj", "{E601E209-3C5C-4A67-B03B-8C01D4A0FE3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSEP.Security", "Security\BSEP.Security.csproj", "{A3DD115B-B04E-4DA4-B9CF-488AEF70D39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSEP.Common", "BSEP.Common\BSEP.Common.csproj", "{D0F548F7-7E99-452D-8583-19FE04470F06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E601E209-3C5C-4A67-B03B-8C01D4A0FE3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E601E209-3C5C-4A67-B03B-8C01D4A0FE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E601E209-3C5C-4A67-B03B-8C01D4A0FE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E601E209-3C5C-4A67-B03B-8C01D4A0FE3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3DD115B-B04E-4DA4-B9CF-488AEF70D39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3DD115B-B04E-4DA4-B9CF-488AEF70D39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3DD115B-B04E-4DA4-B9CF-488AEF70D39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3DD115B-B04E-4DA4-B9CF-488AEF70D39B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0F548F7-7E99-452D-8583-19FE04470F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F548F7-7E99-452D-8583-19FE04470F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F548F7-7E99-452D-8583-19FE04470F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F548F7-7E99-452D-8583-19FE04470F06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

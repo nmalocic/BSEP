@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<message>
+		{0}
+	</message>
+	<sender>
+		{1}
+	</sender>
+</root>
