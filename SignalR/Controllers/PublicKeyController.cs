@@ -20,8 +20,8 @@ namespace SignalR
                 //Read public key from headers and add to list
                 var clientCertificate =
                     Convert.FromBase64String(Request.ReadHeaderValue(Constants.HeaderKeys.Certificate));
-				var clientIdentity = Request.ReadHeaderValue(Constants.HeaderKeys.SenderIdenttiy);
-				KeysManager.AddPublicKeyToList(clientIdentity, clientCertificate);
+				Identity.ChatClientName = Request.ReadHeaderValue(Constants.HeaderKeys.SenderIdenttiy);
+				KeysManager.AddPublicKeyToList(Identity.ChatClientName, clientCertificate);
 
 				//prepare response whit my key
 				response.Headers.Add(Constants.HeaderKeys.Certificate, Convert.ToBase64String(KeysManager.GetMyCertificateByteArray()));

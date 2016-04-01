@@ -16,8 +16,6 @@ namespace SignalR
 		public HttpResponseMessage Post([FromBody]string value)
 		{
 			var clientIdentity = Request.Headers.GetValues(Constants.HeaderKeys.SenderIdenttiy).FirstOrDefault();
-
-
 			var response = Request.CreateResponse(HttpStatusCode.OK);
 			var keyAndIv = KeysManager.GenerateSymetricKey(clientIdentity);
 

@@ -40,7 +40,7 @@ namespace SignalR
 
 			using (var response = request.GetResponse())
 			{
-				var clientIdentity = response.ReadHeaderValue(Constants.HeaderKeys.SenderIdenttiy);
+				var clientName = response.ReadHeaderValue(Constants.HeaderKeys.SenderIdenttiy);
 				var key = response.ReadHeaderValue(Constants.HeaderKeys.SymmetricKey);
 				var iv = response.ReadHeaderValue(Constants.HeaderKeys.SymmetricIv);
 
@@ -50,7 +50,7 @@ namespace SignalR
 					Convert.FromBase64String(iv)
 				};
 
-				KeysManager.AddSymetricKey(clientIdentity, bytes);
+				KeysManager.AddSymetricKey(clientName, bytes);
 			}
 		}
 
